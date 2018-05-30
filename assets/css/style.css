@@ -1,0 +1,527 @@
+/* TEOS Style sheets*/
+
+body {
+	line-height: 17px;
+    background-color: #e6eae8;
+
+}
+
+.user_logged {
+	width: 100%;
+	background-color: black;
+	color: #fff;
+	text-align: right;
+	position: fixed;
+	height: 10px;
+	z-index: 11;
+}
+.user_logged a:hover {
+	
+    font-size: 13px;
+    color:#9393FF;
+    text-decoration: none;
+}
+
+.top_bar {
+	width: 100%;
+	height: 70px;
+	background-color: black;
+	margin:10px 0 10px 0;
+	display: inline-flex;
+	position: fixed;
+	z-index: 10;
+}
+
+.logo img{
+	margin-left: 10px;
+	position: relative;
+	top: 8px;
+	z-index: 3;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+nav {
+	float: right;
+	right: 1px;
+	position: absolute;
+    margin: 25px;
+
+}
+nav a{
+    position: relative;
+	color: #fff;
+	text-decoration: none;
+    font-size: 15px;
+    padding: 25px 0;
+    margin: -25px 10px;
+    display: inline-block;
+    height: 50px;
+  
+
+}
+nav a:hover {
+	
+    font-size: 15px;
+    color:#9393FF;
+    text-decoration: none;
+}
+
+.wrapper {
+	margin: 0 auto;
+	
+	top: 90px;
+	position: relative;
+	padding: 0 10px;
+	width: 75%;
+
+}
+
+.column {
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	box-shadow: 2px 2px 1px #d3d3d3;
+	z-index: -1;
+}
+
+.main_column {
+	margin: 0 auto;
+	width: 70%;
+	z-index: -1;
+	min-height: 160px;
+}
+@media screen and (max-width: 1024px) {
+    .wrapper {width: 95%;}
+	.main_column {width: 95%;}
+	.home-options {display: block;}
+	.admin-options a{display: block; margin: 10px auto;}
+	.timesheet-button {display: block; text-align:center; margin: 0 auto;}
+	.logo img {height: 29px; width: 129px;}
+}
+/*DANNYS HAMBURGER*/
+
+#menuToggle{
+	display: none;
+}
+
+#mobile{	display: none;
+}
+
+@media screen and (max-width: 1165px){
+
+nav {margin: 0;}
+
+#desktop{
+	display: none;
+}
+
+#mobile{
+	display: block;
+}
+
+#menuToggle{
+	display: block;
+}
+
+#checkbox{
+	display:block;
+}
+.wrapper{
+	width: 100%;
+	margin: 0 auto;
+	top: 80px;
+	position: relative;
+	padding: 0 10px;
+	left: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #232323;
+  float: none;
+  transition: color 0.3s ease;
+}
+
+#menuToggle{
+  display: block;
+  position: relative;
+  top: 2px;
+  left: 0px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input{
+  display: block;
+  width: 40px;
+  height: 50px;
+  position: relative;
+  margin-bottom: -30px;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2; 
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px; 
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #fff;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu{
+  position: relative;
+  width: 200px;
+  height: 580px;
+  margin: -100px 0px 0px -180px;
+  padding: 50px;
+  padding-top: 125px;
+  float: none;
+  background: #000;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+}
+/*END DANNYS HAMBURGER*/
+
+#second {
+    display: none;
+}
+
+input select {
+    width: 12em;
+    margin: 0;
+    margin-left: -12.75em;
+}
+input[type="date"]{
+    width: 12em;
+}
+input[type="time"]{
+    width: 12em;
+}
+form select{
+    height: 24px;
+    width: 12em;
+}
+
+ form td {
+    border: none;
+    text-align: left;
+    vertical-align: middle;
+    padding: 0 20px;
+
+}
+form table{
+    position: relative;
+    margin: 0 auto;
+}
+form textarea {
+    height: 80px;
+    width: 12em;
+}
+form input[type="number"]{
+    width: 80px;
+}
+
+.work_order_area a{
+    color: black;
+}
+.work_order_area a:hover{
+	color: rgb(63, 63, 172);
+	
+}
+
+.work_order_head{
+    background-color: #006700;
+    color: #fff;
+    height: 12px;
+	padding: 10px;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	z-index: -1;
+}
+.work_order_head p{
+    width: 33%;
+    display: inline-block;
+
+}
+.work_order{
+    background-color: #fff;
+	padding: 10px;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	box-shadow: 2px 2px 1px #d3d3d3;
+	z-index: -1;
+}
+.work_order p{
+    width: 33%;
+    display: inline-block;
+
+}
+.order-line-grid {
+	display: grid;
+	grid-template-columns: 35px 100px 75px 200px 80px 100px 30px;
+}
+.order-line-grid-item{
+	border-bottom: 1px solid #000;
+	padding: 3px 0;
+	
+}
+.order-line-grid-item input[type="number"]{
+	width: 65px;
+		
+}
+.order-line-grid-item select{
+	width: 90px;	
+}
+.order-line-grid-item button{
+	padding: 3px;	
+}
+.ln-curr{
+	text-align: right;
+}
+.request_info p{
+	margin-right: 80px;
+	display: inline-block;
+}
+
+.confirm_order_head div{
+	display: inline-block;
+}
+
+.left_div p{
+	padding: 5px 10px;
+	text-align: center;
+}
+.right_div {
+	float: right;
+}
+.center_div {
+	display: flex;
+	justify-content: center;
+}
+
+.confirm-labor-grid {
+	display: grid;
+	grid-template-columns: 65% 11% 12% 12%;
+}
+
+.confirm-mats-grid {
+	display: grid;
+	grid-template-columns: 10% 55% 23% 12%;
+}
+.confirm-total-grid {
+	display: grid;
+	grid-template-columns: 65% 23% 12%;
+}
+.jobs-grid {
+	display: grid;
+	grid-template-columns: 35% 35% 15% 15%;
+	background-color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	box-shadow: 2px 2px 1px #d3d3d3;
+	z-index: -1;
+
+}
+.jobs-grid-head {
+	display: grid;
+	grid-template-columns: 35% 35% 15% 15%;
+    background-color: #006700;
+    color: #fff;
+    font-weight: bold;
+    height: 12px;
+	padding: 10px;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	z-index: -1;
+
+}
+.jobs-area a{
+    color: black;
+}
+.jobs-area a:hover{
+	color: rgb(63, 63, 172);
+}
+
+.confirm_order_body h4 {
+	background-color: #006700;
+	color: #fff;
+	text-align: center;
+}
+.confirm_order_body p{
+	padding: 0 20px;
+}
+
+#tabs {
+	border: none;
+}
+.add-emp-grid {
+	display: grid;
+	grid-template-columns: 150px 150px;
+	width: 52%;
+	margin: 0 auto;
+}
+.timesheet-grid {
+	display: grid;
+	grid-template-columns: 50% 30% 10% 10%;
+	background-color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	box-shadow: 2px 2px 1px #d3d3d3;
+	z-index: -1;
+
+}
+.timesheet-grid-head {
+	display: grid;
+	grid-template-columns: 50% 30% 10% 10%;
+	background-color: #006700;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+	z-index: -1;
+
+}
+
+.timesheet-area a{
+    color: black;
+}
+.timesheet-area a:hover{
+	color: rgb(63, 63, 172);
+}
+
+label {
+	min-width: 150px;
+	display: inline-block;
+	padding-right: 1px;
+}
+
+input[name="service_date"] {
+    width: 170px;
+}
+
+.timesheet-head p{
+	width: 30%;
+	display: inline-block;
+	font-weight: bold;
+}
+
+.timesheet-button {
+	width: 150px;
+	height: 125px;
+	border-radius: 25px;
+	font-weight: bold;
+	font-size: 20px;
+
+}
+.sub-timesheet-grid {
+	display: grid;
+	grid-template-columns: 25% 25% 20% 20% 10%;
+}
+.sub-timesheet-grid-item {
+	padding: 10px 4px;
+}
+.sub-timesheet-grid-alt {
+	padding: 10px 4px;
+	background-color: rgba(211, 211, 211, 0.856);
+}
+.payroll-grid {
+	display: grid;
+	grid-template-columns: 10% 25% 20% 20% 20% 5%;
+}
+.payroll-grid-item{
+	padding: 10px 0;
+}
+.payroll-grid-alt{
+	padding: 10px 0;
+	background-color: rgba(211, 211, 211, 0.856);
+}
+.order-report-grid {
+	display: grid;
+	grid-template-columns: 10% 20% 20% 15% 15% 15% 5%;
+}
+input:-moz-read-only { /* For Firefox */
+	background-color: #fff;
+	cursor: pointer;
+}
+
+input:read-only { 
+	background-color: #fff;
+	cursor: pointer;
+}
